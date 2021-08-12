@@ -6,8 +6,10 @@ RUN pip3 install joblib
 
 RUN pip3 install scikit-learn
 
-COPY marks_model.pkl /
+RUN pip3 install pandas
 
-COPY markf.py /
+COPY salary.py /
 
-CMD python3 markf.py 
+COPY salary.csv /
+
+CMD python3 salary.py 
